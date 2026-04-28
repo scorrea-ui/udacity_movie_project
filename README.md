@@ -35,9 +35,20 @@ This project creates a dynamic website that showcases your favorite movies. Each
    python entertainment_center.py
    ```
 
-4. **View your movie website:**
-   - The script will automatically open `fresh_tomatoes.html` in your default web browser
-   - If it doesn't open automatically, manually open the `fresh_tomatoes.html` file in your browser
+4. **Start a local web server to view the trailers:**
+
+   The YouTube trailers require a local web server due to browser security restrictions. In a new terminal window, run:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+5. **View your movie website:**
+   - Open your web browser and go to: `http://localhost:8000/fresh_tomatoes.html`
+   - Click on any movie poster to watch its trailer
+   - To stop the server, press `Ctrl+C` in the terminal
+
+**Note:** Opening `fresh_tomatoes.html` directly in your browser (file:// protocol) will not work for YouTube trailers due to security restrictions. You must use the local web server.
 
 ## How to Customize
 

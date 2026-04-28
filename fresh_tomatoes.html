@@ -1,6 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
@@ -40,6 +38,7 @@
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
+            height: 0;
         }
         .scale-media iframe {
             border: none;
@@ -61,12 +60,16 @@
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            var trailerYouTubeQuery = $(this).attr('data-trailer-youtube-query') || ''
+            var sourceUrl = 'https://www.youtube.com/embed/' + trailerYouTubeId + (trailerYouTubeQuery ? trailerYouTubeQuery : '');
             $("#trailer-video-container").empty().append($("<iframe></iframe>", {
               'id': 'trailer-video',
-              'type': 'text-html',
+              'title': 'YouTube video player',
               'src': sourceUrl,
-              'frameborder': 0
+              'frameborder': 0,
+              'allow': 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              'referrerpolicy': 'strict-origin-when-cross-origin',
+              'allowfullscreen': true
             }));
         });
         // Animate in the movies when the page loads
@@ -78,6 +81,8 @@
     </script>
 </head>
 
+<!DOCTYPE html>
+<html lang="en">
   <body>
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
@@ -91,7 +96,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -104,32 +109,32 @@
     </div>
     <div class="container">
       
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="v-PjgYDrg00" data-toggle="modal" data-target="#trailer">
-    <img src="https://m.media-amazon.com/images/M/MV5BNTA2NDEyNDEtYTBhNS00NmQ3LWFmZTAtMzA0OWZhNDc0NzExXkEyXkFqcGdeQXVyNTA4NzMyMDA@._V1_SX300.jpg" width="220" height="342">
-    <h2>Toy Story</h2>
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="2BlMNH1QTeE" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/I/71M5v4cCsFL._AC_UF894,1000_QL80_.jpg" width="220" height="342">
+    <h2>Toy Story 3</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="vKQi3bBA1y8" data-toggle="modal" data-target="#trailer">
-    <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTAwLWI5N2YtMmFkMTZmMmJkNjc3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="m8e-FF8MsqU" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" width="220" height="342">
     <h2>The Matrix</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="YoHD3HAjGGA" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="YoHD9XEInc0" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
     <img src="https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg" width="220" height="342">
     <h2>Inception</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zSID6AWsSLU" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zSWdZVtXT7E" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
     <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg" width="220" height="342">
     <h2>Interstellar</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
     <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg" width="220" height="342">
     <h2>The Dark Knight</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="owK1qxDselE" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="4rgYUipGJNo" data-trailer-youtube-query="" data-toggle="modal" data-target="#trailer">
     <img src="https://friedrichsbau-kino.de/fileadmin/friedrichsbau/import/_processed_/a/3/csm_fw27big_13_10941174f6.jpg" width="220" height="342">
     <h2>Gladiator 2</h2>
 </div>

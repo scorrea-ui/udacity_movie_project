@@ -7,7 +7,7 @@ including title, poster image URL, and trailer YouTube URL.
 
 class Movie:
     """A class to represent a movie.
-    
+
     Attributes:
         title (str): The title of the movie.
         poster_image_url (str): URL to the movie's poster image.
@@ -16,7 +16,7 @@ class Movie:
 
     def __init__(self, title, poster_image_url, trailer_youtube_url):
         """Initialize a Movie object.
-        
+
         Args:
             title (str): The title of the movie.
             poster_image_url (str): URL to the movie's poster image.
