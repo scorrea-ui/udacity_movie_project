@@ -16,7 +16,8 @@ main_page_head = '''
     <link rel="stylesheet"
           href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js">
+    <script
+      src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js">
     </script>
     <style type="text/css" media="screen">
         body {
@@ -111,7 +112,9 @@ main_page_content = '''
         <div class="modal-content">
           <a href="#" class="hanging-close"
              data-dismiss="modal" aria-hidden="true">
-                <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+                <img
+                  src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"
+                  />
           </a>
           <div class="scale-media" id="trailer-video-container">
           </div>
